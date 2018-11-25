@@ -1,0 +1,289 @@
+<div class="main-content" >
+  <div class="page-content page-thin">
+      <div class="row">
+          <span style="font-size: 28px;">TGDS Center Name : Maxwell</span>
+      </div>
+      <div class="row">
+           <div class="col-md-3"><h3>TGDS Center</h3>
+                <div class="card bg-primary text-white" style="width: 250px;
+                height: 120px;">
+                       
+                        <div class="card-body">50</div> 
+                        
+                  </div>
+
+           </div>
+           <div class="col-md-3"><h3>Service Partner</h3>
+                <div class="card bg-success text-white" style="width: 250px;
+                height: 120px;">
+                       
+                        <div class="card-body">50</div> 
+                        
+                  </div>
+           </div>
+           <div class="col-md-3"><h3>Charted Accountant</h3>
+            <div class="card bg-info text-white" style="width: 250px;
+            height: 120px;">
+                       
+                    <div class="card-body">20</div> 
+                    
+              </div>
+
+           </div>
+           <div class="col-md-3"><h3>Refferal</h3>
+                <div class="card bg-dark text-white" style="width: 250px;
+                height: 120px;">
+                       
+                        <div class="card-body">100</div> 
+                        
+                  </div>
+           </div>
+        </div>
+        <!--guage-->
+        <div style="margin-top: 47px;">
+            <amexio-row> 
+                 
+               <amexio-column size="3">
+                <amexio-dashboard-gauge  [data]="gaugeChartData1" [red-color-from]="0" [red-color-to]="25" [yellow-color-from]="75"
+                 [yellow-color-to]="100" [scale-value]="5">
+                </amexio-dashboard-gauge>
+               
+               </amexio-column> 
+          
+                <amexio-column size="3"> 
+                  <amexio-dashboard-gauge  [data]="gaugeChartData2" [red-color-from]="0" [red-color-to]="25" [yellow-color-from]="75"
+                   [yellow-color-to]="100" [scale-value]="5">
+                  </amexio-dashboard-gauge>
+                 
+                  </amexio-column> 
+                   
+                       <amexio-column size="3">
+                        <amexio-dashboard-gauge [data]="gaugeChartData3" [red-color-from]="0" [red-color-to]="25" [yellow-color-from]="75"
+                         [yellow-color-to]="100" [scale-value]="5">
+                        </amexio-dashboard-gauge>
+                      
+                        </amexio-column> 
+                         
+                            <amexio-column size="3">
+                              <amexio-dashboard-gauge  [data]="gaugeChartData4" [red-color-from]="0" [red-color-to]="25" [yellow-color-from]="75"
+                               [yellow-color-to]="100" [scale-value]="5">
+                              </amexio-dashboard-gauge>
+                            </amexio-column> 
+                               
+                              </amexio-row>
+               </div>
+        <!--end guage-->
+         <div class="row" style="margin-top: 47px;">
+                <div class="col-md-3">
+                  <circle-progress
+                  [percent]="85"
+                  [radius]="80"
+                  [outerStrokeWidth]="10"
+                  [innerStrokeWidth]="8"
+                  [outerStrokeColor]="'#78C000'"
+                  [innerStrokeColor]="'#C7E596'"
+                  [animation]="true"
+                  [animationDuration]="300"
+                ></circle-progress>
+                </div>
+                <div class="col-md-3">
+                  <circle-progress
+                  
+                  [percent]="85"
+                  [radius]="80"
+                  [outerStrokeWidth]="1"
+                  [innerStrokeWidth]="8"
+                  [outerStrokeColor]="'#78C000'"
+                  [innerStrokeColor]="'#C7E596'"
+                  [animation]="true"
+                  [animationDuration]="300"
+                  
+                ></circle-progress>
+                </div>
+                <div class="col-md-3">
+                  <circle-progress
+
+ 
+                      [backgroundPadding]="-18"
+                  [backgroundColor]="'#F1F1F1'"
+                  [toFixed]="2"
+                  [percent]="85"
+                  [radius]="80"
+                  [outerStrokeWidth]="10"
+                  [innerStrokeWidth]="1"
+                  [outerStrokeColor]="'#FF6347'"
+                  [innerStrokeColor]="'#32CD32'"
+                  [animation]="true"
+                  [animationDuration]="300"
+                ></circle-progress>
+                </div>
+                <div class="col-md-3">
+                  <circle-progress
+                  [percent]="100"
+                  [radius]="80"
+                  [outerStrokeWidth]="10"
+                  [innerStrokeWidth]="0"
+                  [outerStrokeColor]="'#61A9DC'"
+                  [innerStrokeColor]="'#C7E596'"
+                  [animation]="true"
+                  [animationDuration]="300"
+                  [backgroundColor]="'#DDDDDD'"
+               
+                ></circle-progress>
+                </div>
+             </div>
+            
+     <div class="row" style="margin-top: 47px;">
+      <div class="col-md-3">
+        <div>
+          <div style="display: block">
+            <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+          </div>
+          
+        </div>
+
+      </div>
+      <div class="col-md-3">
+        <div>
+          <div style="display: block">
+            <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+          </div>
+          
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div>
+          <div style="display: block">
+            <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+          </div>
+         
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div>
+          <div style="display: block">
+            <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+          </div>
+         
+        </div>
+      </div>
+      
+      
+     </div>
+     <div class="row" style="margin-top: 47px;">
+            <div class="col-md-3">
+                    <canvas baseChart
+                    [data]="pieChartData"
+                    [labels]="pieChartLabels"
+                    [chartType]="pieChartType"
+                    (chartHover)="chartHoveredofChart($event)"
+                    (chartClick)="chartClickedofPieChart($event)"></canvas>
+            </div>
+            <div class="col-md-3">
+                    <canvas baseChart
+                    [data]="pieChartData"
+                    [labels]="pieChartLabels"
+                    [chartType]="pieChartType"
+                    (chartHover)="chartHoveredofChart($event)"
+                    (chartClick)="chartClickedofPieChart($event)"></canvas>
+            </div>
+            <div class="col-md-3">
+             
+             
+               <canvas baseChart
+              [data]="pieChartData"
+              [labels]="pieChartLabels"
+              [chartType]="pieChartType"
+              (chartHover)="chartHoveredofChart($event)"
+              (chartClick)="chartClickedofPieChart($event)"></canvas>
+                  
+            </div>
+            <div class="col-md-3">
+                    <table  class="table table-hover table-bordered table-dark" >
+                            <tr>
+                              <th>Name</th>
+                              <th>Telephone</th>
+                              <th>Email</th>
+                              <th>Action</th>
+                            </tr>
+                            <tr>
+                              <td>Anil Patil</td>
+                              <td>55577854</td>
+                               <td>anilrspatil@gmail.com</td>
+                               <td>
+                                    <button type="button" class="btn btn-info">Info</button>
+                               </td>
+                            </tr>
+                            <tr>
+                                    <td>vikas </td>
+                                    <td>55577854</td>
+                                     <td>vikas@gmail.com</td>
+                                     <td>
+                                            <button type="button" class="btn btn-info">Info</button>
+                                     </td>
+                                  </tr>
+                                  <tr>
+                                        <td>Sana</td>
+                                        <td>55577854</td>
+                                         <td>sana@gmail.com</td>
+                                         <td>
+                                                <button type="button" class="btn btn-info">Info</button>
+                                         </td>
+                                      </tr>
+                                      <tr>
+                                            <td>nikhil</td>
+                                            <td>55577854</td>
+                                             <td>nikhil@gmail.com</td>
+                                             <td>
+                                                    <button type="button" class="btn btn-info">Info</button>
+                                             </td>
+                                          </tr>
+                                         
+                          </table>
+            </div>
+         </div>
+         <div class="row">
+                <div class="col-md-3">
+                        <canvas baseChart
+                        [data]="lineChartData"
+                        [labels]="lineChartLabels"
+                        [options]="lineChartOptions"
+                        [chartType]="lineChartType"
+                        (chartHover)="chartHoveredofLine($event)"
+                        (chartClick)="chartClickedofLine($event)"></canvas>
+
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+             </div>
+  </div>  
+ </div>
